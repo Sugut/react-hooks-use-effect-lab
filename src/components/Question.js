@@ -6,12 +6,12 @@ function Question({ question, onAnswered }) {
   // add useEffect code
   useEffect(()=>{
         const timer = setTimeout(()=>{
-          setTimeRemaining((timeReading)=>timeRemaining -1);
+          setTimeRemaining((timeRemaining)=>timeRemaining -1);
       },1000)
       
       if(timeRemaining === 0){
-        onAnswered(false)
-        setTimeRemaining(10)
+        onAnswered(false);
+        setTimeRemaining(10);
         return;
       }
         return () => clearTimeout(timer)
